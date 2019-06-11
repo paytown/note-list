@@ -22,7 +22,7 @@ export const withSession = Component => {
     }
   }
 
-  const mapStateToProps = ({
+  const mapStateToProps = state => ({
     token: getToken(state)
   });
 

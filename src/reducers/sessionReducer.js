@@ -1,3 +1,5 @@
+import { SET_SESSION } from '../actions/sessionActions';
+
 const initialState = {
   username: '',
   token: '',
@@ -5,5 +7,10 @@ const initialState = {
 };
 
 export default function reducer(state = initialState, action) {
-  return state;
+  switch(action.type) {
+    case SET_SESSION:
+      return action.payload;
+    default:
+      return state;
+  }
 }
