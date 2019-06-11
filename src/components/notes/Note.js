@@ -1,9 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 function Note({ note }) {
   return (
-    <p>{note.title}</p>
+    <>
+      <Link to={`/${note._id}`}>
+        <p>{note.title}</p>
+      </Link>
+    </>
   );
 }
 
