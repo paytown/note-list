@@ -1,5 +1,5 @@
 import { createAction } from 'promise-middleware-redux';
-import { createNote, getNotes } from '../services/notesApi';
+import { createNote, getNotes, getNoteDetail } from '../services/notesApi';
 
 export const [
   newNote,
@@ -12,3 +12,9 @@ export const [
   FETCH_NOTES,
   FETCH_NOTES_PENDING
 ] = createAction('FETCH_NOTES', getNotes);
+
+export const [
+  fetchNoteDetail,
+  FETCH_NOTE_DETAIL,
+  FETCH_NOTE_DETAIL_PENDING,
+] = createAction('FETCH_NOTE_DETAIL', getNoteDetail);
